@@ -118,9 +118,18 @@ let flashedBy=row[8];
 
 let newFirmware=row[6];
 
+if(
+newFirmware.toString().trim()=="86.02.00" ||
+newFirmware.toString().trim()=="91.03.00"
+){
+
 techCount[flashedBy]=(techCount[flashedBy]||0)+1;
+
 cityCount[city]=(cityCount[city]||0)+1;
+
 dateCount[date]=(dateCount[date]||0)+1;
+
+}
 
 if(newFirmware.toString().trim()=="86.02.00"){
 fw8602++;
