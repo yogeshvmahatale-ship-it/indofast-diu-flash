@@ -107,15 +107,29 @@ let techCount={};
 let cityCount={};
 let dateCount={};
 
+let fw8602=0;
+let fw9103=0;
+
 data.forEach(row=>{
 
 let date=new Date(row[0]).toLocaleDateString("en-IN");
 let city=row[7];
 let flashedBy=row[8];
 
+let newFirmware=row[6];
+
 techCount[flashedBy]=(techCount[flashedBy]||0)+1;
 cityCount[city]=(cityCount[city]||0)+1;
 dateCount[date]=(dateCount[date]||0)+1;
+
+if(newFirmware.toString().trim()=="86.02.00"){
+fw8602++;
+}
+
+if(newFirmware.toString().trim()=="91.03.00"){
+fw9103++;
+
+}
 
 });
 
@@ -156,6 +170,12 @@ return dateB-dateA;
 .map(([k,v])=>`${k}: ${v}`)
 
 .join("<br>");
+
+document.getElementById("fw8602").innerHTML=fw8602;
+
+document.getElementById("fw9103").innerHTML=fw9103;
+
+document.getElementById("totalTarget").innerHTML=fw8602+fw9103;
 
 document.getElementById("totalFlash").innerHTML=data.length;
 
