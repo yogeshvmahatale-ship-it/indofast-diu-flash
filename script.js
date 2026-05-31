@@ -6,7 +6,13 @@ e.preventDefault();
 
 let date=document.querySelector('input[type="date"]').value;
 
-let city=document.querySelectorAll("select")[3].value;
+let selects=document.querySelectorAll("select");
+
+let vehicleType=selects[0].value;
+let oem=selects[1].value;
+let oldFirmware=selects[2].value;
+let newFirmware=selects[3].value;
+let city=selects[4].value;
 
 let flashedBy=document.querySelectorAll("input")[3].value;
 
