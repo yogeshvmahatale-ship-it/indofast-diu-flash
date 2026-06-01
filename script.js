@@ -190,8 +190,6 @@ document.getElementById("fw8602").innerHTML=fw8602;
 
 document.getElementById("fw9103").innerHTML=fw9103;
 
-document.getElementById("totalTarget").innerHTML=fw8602+fw9103;
-
 document.getElementById("totalFlash").innerHTML=data.length;
 
 });
