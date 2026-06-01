@@ -74,10 +74,12 @@ flex-wrap:wrap;
 
 background:#1e293b;
 padding:20px;
-border-radius:10px;
+border-radius:12px;
 border:1px solid orange;
 min-width:250px;
 flex:1;
+box-shadow:0 2px 8px rgba(0,0,0,0.3);
+
 
 }
 
@@ -85,5 +87,20 @@ flex:1;
 
 color:orange;
 margin-top:0;
+font-size:20px;
+font-weight:bold;
 
+}
+
+#totalFlash,
+#fw8602,
+#fw9103,
+#totalTarget{
+
+font-size:32px;
+font-weight:bold;
+
+}
+#totalFlash{
+    color:white;
 }
