@@ -94,11 +94,11 @@ font-weight:bold;
 
 #totalFlash,
 #fw8602,
-#fw9103,
-{
+#fw9103{
 
 font-size:32px;
 font-weight:bold;
+color:white;
 
 }
 #totalFlash{
