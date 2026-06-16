@@ -19,17 +19,6 @@ let flashedBy=document.querySelectorAll("input")[3].value;
 // Get VIN Number field
 let vin=document.querySelectorAll('input')[1].value;
 
-// Check duplicate VIN
-let duplicateVIN=entries.some(item => item.vin===vin);
-
-if(duplicateVIN){
-
-alert("VIN Number already exists! Duplicate entry not allowed.");
-
-return;
-
-}
-
 entries.push({
 
 vin,
