@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Indofast DIU Flash</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="header">
+
+<img src="logo.png" class="logo">
+
+<h1>Indofast DIU Flash</h1>
+
+</div>
+
+<div class="container">
+
+<form id="flashForm">
+
+<label>Date</label>
+<input type="date" required>
+
+<label>Vehicle Number</label>
+<input type="text" placeholder="Enter Vehicle Number">
+
+<label>DIU ID</label>
+<input type="text" placeholder="Enter DIU ID">
+
+<label>Vehicle Type</label>
+
+<select>
+<option>Select</option>
+<option>2W</option>
+<option>3W</option>
+</select>
+
+<label>OEM</label>
+
+<select required>
+
+<option value="">Select OEM</option>
+<option>AMO | Jaunty</option>
+<option>Ampere Magnus</option>
+<option>BattRE</option>
+<option>BGauss</option>
+<option>Bounce Infinity</option>
+<option>Comptech VX1</option>
+<option>Emobi Akx</option>
+<option>eSprinto</option>
+<option>Ezon</option>
+<option>Fujiyama</option>
+<option>Gemopai Ryder</option>
+<option>Hero NYX</option>
+<option>Jitendra JMT 1000SW</option>
+<option>Jitendra JMT1000SW</option>
+<option>Kinetic Zing</option>
+<option>Lectrix</option>
+<option>Motovolt</option>
+<option>NXT A</option>
+<option>Odysse</option>
+<option>Quantum Bziness</option>
+<option>SES Eagle</option>
+<option>Sprinto HS</option>
+<option>Vegh</option>
+<option>Piaggio</option>
+<option>OSM</option>
+<option>Other</option>
+
+</select>
+
+<label>Old Firmware Version</label>
+
+<select>
+
+<option>Select Old Firmware</option>
+
+<option>86.00.00</option>
+<option>86.01.00</option>
+<option>91.00.00</option>
+<option>91.02.00</option>
+<option>Other</option>
+
+</select>
+
+<label>New Firmware Version</label>
+
+<select required>
+<option value="">Select New Firmware</option>
+
+<option>86.02.00</option>
+<option>86.01.00</option>
+<option>90.00.00</option>
+<option>91.03.00</option>
+<option>Other</option>
+
+</select>
+
+<label>City</label>
+
+<select required>
+<option value="">Select City</option>
+<option>Agra</option>
+<option>Chandigarh</option>
+<option>Delhi</option>
+<option>Faridabad</option>
+<option>Ghaziabad</option>
+<option>Greater Noida</option>
+<option>Gurgaon</option>
+<option>Jaipur</option>
+<option>Noida</option>
+<option>Other</option>
+
+</select>
+
+<label>Flashed By</label>
+<input type="text" placeholder="Enter Name" required>
+<button type="submit">
+
+Submit Flash Log
+
+</button>
+
+</form>
+<h2>Flash Dashboard Summary</h2>
+
+<div class="card">
+<h3>Total Flash Count</h3>
+<div id="totalFlash"></div>
+</div>
+<div class="summary-box">
+
+<div class="card">
+<h3>Flashed By Summary</h3>
+<div id="techSummary"></div>
+</div>
+
+<div class="card">
+<h3>City Summary</h3>
+<div id="citySummary"></div>
+</div>
+
+<div class="card">
+<h3>86.02.00 Flash</h3>
+<div id="fw8602"></div>
+</div>
+
+<div class="card">
+<h3>91.03.00 Flash</h3>
+<div id="fw9103"></div>
+</div>
+
+<div class="card">
+<h3>90.01.01 Flash</h3>
+<h1 id="fw900101">0</h1>
+</div>
+
+<div class="card">
+<h3>Date Summary</h3>
+<div id="dateSummary"></div>
+</div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

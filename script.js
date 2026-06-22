@@ -104,6 +104,7 @@ let dateCount={};
 
 let fw8602=0;
 let fw9103=0;
+let fw900101=0;
 
 data.forEach(row=>{
 
@@ -115,7 +116,8 @@ let newFirmware=row[6];
 
 if(
 newFirmware.toString().trim()=="86.02.00" ||
-newFirmware.toString().trim()=="91.03.00"
+newFirmware.toString().trim()=="91.03.00" ||
+newFirmware.toString().trim()=="90.01.01"
 ){
 
 techCount[flashedBy]=(techCount[flashedBy]||0)+1;
@@ -133,6 +135,9 @@ fw8602++;
 if(newFirmware.toString().trim()=="91.03.00"){
 fw9103++;
 
+}
+if(newFirmware.toString().trim()=="90.01.01"){
+fw900101++;
 }
 
 });
@@ -178,6 +183,8 @@ return dateB-dateA;
 document.getElementById("fw8602").innerHTML=fw8602;
 
 document.getElementById("fw9103").innerHTML=fw9103;
+
+document.getElementById("fw900101").innerHTML=fw900101;
 
 document.getElementById("totalFlash").innerHTML=data.length;
 
