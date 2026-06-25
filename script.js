@@ -45,7 +45,7 @@ oem:document.querySelectorAll("select")[1].value,
 oldFirmware:document.querySelectorAll("select")[2].value,
 newFirmware:document.querySelectorAll("select")[3].value,
 city:city,
-flashedBy:flashedBy
+flashedBy:flashedBy,
 region:region
 
 })
