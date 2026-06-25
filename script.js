@@ -13,6 +13,7 @@ let oem=selects[1].value;
 let oldFirmware=selects[2].value;
 let newFirmware=selects[3].value;
 let city=selects[4].value;
+let region=selects[5].value;   // New Region dropdown
 
 let flashedBy=document.querySelectorAll("input")[3].value;
 
@@ -24,6 +25,7 @@ entries.push({
 vin,
 date,
 city,
+region,
 flashedBy
 
 });
@@ -44,6 +46,7 @@ oldFirmware:document.querySelectorAll("select")[2].value,
 newFirmware:document.querySelectorAll("select")[3].value,
 city:city,
 flashedBy:flashedBy
+region:region
 
 })
 
