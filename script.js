@@ -66,6 +66,7 @@ function updateSummary(){
 let techCount={};
 let cityCount={};
 let dateCount={};
+let regionCount={};
 
 entries.forEach(item=>{
 
@@ -104,6 +105,7 @@ fetch("https://script.google.com/macros/s/AKfycbyDMn5JcCmwl7ya7CYq0HTP6VQ5lLtBzK
 let techCount={};
 let cityCount={};
 let dateCount={};
+let regionCount={};
 
 let fw8602=0;
 let fw9103=0;
@@ -114,6 +116,7 @@ data.forEach(row=>{
 let date=new Date(row[0]).toLocaleDateString("en-IN");
 let city=row[7];
 let flashedBy=row[8];
+let region=row[9];
 
 let newFirmware=row[6];
 
@@ -126,6 +129,8 @@ newFirmware.toString().trim()=="90.01.01"
 techCount[flashedBy]=(techCount[flashedBy]||0)+1;
 
 cityCount[city]=(cityCount[city]||0)+1;
+
+regionCount[region]=(regionCount[region]||0)+1;
 
 dateCount[date]=(dateCount[date]||0)+1;
 
@@ -157,6 +162,12 @@ Object.entries(techCount)
 document.getElementById("citySummary").innerHTML=
 
 Object.entries(cityCount)
+.map(([k,v])=>`${k}: ${v}`)
+.join("<br>");
+
+document.getElementById("regionSummary").innerHTML=
+
+Object.entries(regionCount)
 .map(([k,v])=>`${k}: ${v}`)
 .join("<br>");
 
