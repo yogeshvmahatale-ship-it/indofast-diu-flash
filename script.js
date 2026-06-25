@@ -65,8 +65,9 @@ function updateSummary(){
 
 let techCount={};
 let cityCount={};
-let dateCount={};
 let regionCount={};
+let dateCount={};
+
 
 entries.forEach(item=>{
 
