@@ -117,7 +117,8 @@ fetch("https://script.google.com/macros/s/AKfycbyDMn5JcCmwl7ya7CYq0HTP6VQ5lLtBzK
 
 .then(data=>{
 
-let techCount={};
+let northTechCount={};
+let southTechCount={};
 let cityCount={};
 let dateCount={};
 let regionCount={};
@@ -141,7 +142,13 @@ newFirmware.toString().trim()=="91.03.00" ||
 newFirmware.toString().trim()=="90.01.01"
 ){
 
-techCount[flashedBy]=(techCount[flashedBy]||0)+1;
+if(region=="North"){
+    northTechCount[flashedBy]=(northTechCount[flashedBy]||0)+1;
+}
+
+if(region=="South"){
+    southTechCount[flashedBy]=(southTechCount[flashedBy]||0)+1;
+}
 
 cityCount[city]=(cityCount[city]||0)+1;
 
@@ -166,12 +173,17 @@ fw900101++;
 });
 
 
-document.getElementById("techSummary").innerHTML=
-
-Object.entries(techCount)
+document.getElementById("northTechSummary").innerHTML =
+Object.entries(northTechCount)
+.sort((a,b)=>b[1]-a[1])
 .map(([k,v])=>`${k}: ${v}`)
 .join("<br>");
 
+document.getElementById("southTechSummary").innerHTML =
+Object.entries(southTechCount)
+.sort((a,b)=>b[1]-a[1])
+.map(([k,v])=>`${k}: ${v}`)
+.join("<br>");
 
 
 document.getElementById("citySummary").innerHTML=
