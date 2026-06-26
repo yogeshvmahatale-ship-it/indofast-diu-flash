@@ -63,7 +63,8 @@ updateSummary();
 
 function updateSummary(){
 
-let techCount={};
+let northTechCount = {};
+let southTechCount = {};
 let cityCount={};
 let regionCount={};
 let dateCount={};
@@ -71,7 +72,13 @@ let dateCount={};
 
 entries.forEach(item=>{
 
-techCount[item.flashedBy]=(techCount[item.flashedBy]||0)+1;
+if (region === "North") {
+    northTechCount[flashedBy] = (northTechCount[flashedBy] || 0) + 1;
+}
+
+if (region === "South") {
+    southTechCount[flashedBy] = (southTechCount[flashedBy] || 0) + 1;
+}
 
 cityCount[item.city]=(cityCount[item.city]||0)+1;
 
@@ -79,8 +86,15 @@ dateCount[item.date]=(dateCount[item.date]||0)+1;
 
 });
 
-document.getElementById("techSummary").innerHTML=
-Object.entries(techCount)
+document.getElementById("northTechSummary").innerHTML =
+Object.entries(northTechCount)
+.sort((a,b)=>b[1]-a[1])
+.map(([k,v])=>`${k}: ${v}`)
+.join("<br>");
+
+document.getElementById("southTechSummary").innerHTML =
+Object.entries(southTechCount)
+.sort((a,b)=>b[1]-a[1])
 .map(([k,v])=>`${k}: ${v}`)
 .join("<br>");
 
